@@ -5,7 +5,7 @@ module Problems
       upper = arr.size - 1
 
       while upper >= lower
-        middle = lower + (upper - lower) / 2
+        middle = (upper + lower) / 2
 
         if arr[middle] > value
           upper = middle - 1
