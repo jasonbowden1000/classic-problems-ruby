@@ -1,8 +1,8 @@
+require_relative './../util'
+
 module Problems
   class String
-    def letter?(c)
-      c =~ /[[:alpha:]]/
-    end
+    include Util
 
     def palindrome?(str)
       i = 0
