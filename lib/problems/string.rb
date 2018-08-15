@@ -1,5 +1,3 @@
-require_relative './../util'
-
 module Problems
   class String
     include Util
