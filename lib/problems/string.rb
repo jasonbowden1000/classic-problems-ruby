@@ -1,30 +1,8 @@
 module Problems
   class String
-    include Util
-
     def palindrome?(str)
-      i = 0
-      j = str.length - 1
-      result = true
-
-      while i < j
-        while !letter?(str[i]) && i < j
-          i += 1
-        end
-
-        while !letter?(str[j]) && i < j
-          j -= 1
-        end
-
-        if !str[i].casecmp?(str[j])
-          result = false
-        end
-
-        i += 1
-        j -= 1
-      end
-
-      result
+      letters = str.downcase.scan(/\w/)
+      letters == letters.reverse
     end
   end
 end
