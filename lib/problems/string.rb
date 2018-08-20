@@ -1,9 +1,10 @@
 module Problems
   class String
     ROMAN_HASH = {
-      "I" => 1, "IV" => 4, "V" => 5, "IX" => 9, "X" => 10, "XL" => 40,
-      "L" => 50, "XC" => 90, "C" => 100, "CD" => 400, "D" => 500, "M" => 1000
+      'I' => 1, 'IV' => 4, 'V' => 5, 'IX' => 9, 'X' => 10, 'XL' => 40,
+      'L' => 50, 'XC' => 90, 'C' => 100, 'CD' => 400, 'D' => 500, 'M' => 1000
     }
+
     def arabicToRoman(n)
       ROMAN_HASH.reverse_each.to_h.inject('') do |acc, (roman, arabic)|
         while n >= arabic
@@ -20,7 +21,7 @@ module Problems
     end
 
     def romanToArabic(str)
-      str = str.split("").map { |n| ROMAN_HASH[n] }.reverse
+      str = str.split('').map { |n| ROMAN_HASH[n] }.reverse
       str.each_cons(2).inject(str[0]) do |acc, (prev, curr)|
         curr >= prev ? acc + curr : acc - curr
       end
