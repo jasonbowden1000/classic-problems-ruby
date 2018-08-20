@@ -10,7 +10,7 @@ module Problems
         n /= 10
       end
 
-      return r * sign
+      r * sign
     end
   end
 end

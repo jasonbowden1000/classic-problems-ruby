@@ -16,8 +16,8 @@ module Problems
           upper = middle - 1
         end
       end
-      
-      return result
+
+      result
     end
   end
 end
