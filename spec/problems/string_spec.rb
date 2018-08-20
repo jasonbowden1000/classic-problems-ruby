@@ -16,7 +16,7 @@ describe 'String processing' do
     end
 
     it 'should accept a palindromic sentence with non-alphabetic characters' do
-      expect(string.palindrome?('A car, a man, a maraca')).to be true
+      expect(string.palindrome?('123A car, a man, a maraca')).to be true
     end
 
     it 'should reject non-palindromic words' do

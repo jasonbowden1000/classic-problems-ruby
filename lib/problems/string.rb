@@ -16,7 +16,7 @@ module Problems
     end
 
     def palindrome?(str)
-      letters = str.downcase.scan(/\w/)
+      letters = str.downcase.scan(/[a-zA-Z]/)
       letters == letters.reverse
     end
 
