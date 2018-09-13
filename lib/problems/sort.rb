@@ -1,8 +1,8 @@
 module Problems
   class Sort
-    def merge_sorted(c, d)
-      a = c.dup.reverse!
-      b = d.dup.reverse!
+    def merge_sorted(a, b)
+      a = a.dup.reverse!
+      b = b.dup.reverse!
       merged = []
 
       loop do
