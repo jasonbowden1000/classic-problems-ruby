@@ -5,7 +5,7 @@ module Problems
       'L' => 50, 'XC' => 90, 'C' => 100, 'CD' => 400, 'D' => 500, 'M' => 1000
     }
 
-    def arabicToRoman(n)
+    def arabic_to_roman(n)
       ROMAN_HASH.reverse_each.to_h.inject('') do |acc, (roman, arabic)|
         while n >= arabic
           acc = acc + roman
@@ -20,7 +20,7 @@ module Problems
       letters == letters.reverse
     end
 
-    def romanToArabic(str)
+    def roman_to_arabic(str)
       str = str.split('').map { |n| ROMAN_HASH[n] }.reverse
       str.each_cons(2).inject(str[0]) do |acc, (prev, curr)|
         curr >= prev ? acc + curr : acc - curr

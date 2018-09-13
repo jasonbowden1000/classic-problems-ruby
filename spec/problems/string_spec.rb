@@ -28,12 +28,12 @@ describe 'String processing' do
 
   describe 'romanToArabic' do
     it 'should return its arabic representation' do
-      expect(string.romanToArabic('MDCCCLXVI')).to equal(1866);
-      expect(string.romanToArabic('XIV')).to equal(14);
-      expect(string.romanToArabic('LXXXIX')).to equal(89);
-      expect(string.romanToArabic('XCI')).to equal(91);
-      expect(string.romanToArabic('DCCCXC')).to equal(890);
-      expect(string.romanToArabic('MCMLXXXIX')).to equal(1989);
+      expect(string.roman_to_arabic('MDCCCLXVI')).to equal(1866);
+      expect(string.roman_to_arabic('XIV')).to equal(14);
+      expect(string.roman_to_arabic('LXXXIX')).to equal(89);
+      expect(string.roman_to_arabic('XCI')).to equal(91);
+      expect(string.roman_to_arabic('DCCCXC')).to equal(890);
+      expect(string.roman_to_arabic('MCMLXXXIX')).to equal(1989);
     end
   end
 
@@ -82,8 +82,8 @@ describe 'String processing' do
 
   describe 'arabicToRoman' do
     it 'should return the Roman representation of an Arabic number' do
-      expect(string.arabicToRoman(1666)).to eql('MDCLXVI');
-      expect(string.arabicToRoman(91)).to eql('XCI');
+      expect(string.arabic_to_roman(1666)).to eql('MDCLXVI');
+      expect(string.arabic_to_roman(91)).to eql('XCI');
     end
   end
 end
